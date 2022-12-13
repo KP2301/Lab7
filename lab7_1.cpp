@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<string>
 
 using namespace std;
 
@@ -34,8 +35,26 @@ string func3(string x){
 }
 
 int main(){
-    cout >> "Input text: "
-    cout >> "Reversed text: "
-    cout >> "Palindrome: "
+	string T;
+	string R;
+	string P;
+	int i = 0;
+    cout << "Input text: ";
+	cin >> T;
+	int l = T.size();
+	R = func1(T);
+    cout << "Reversed text: " << R << endl ; 
+	T = func3(T);
+	R = func3(R);
+
+	while(i < l){
+		if(T[i] == R[i]){
+			P = "Yes" ;
+		}else{
+			P = "No" ;
+		}
+		i++;
+	}
+    cout << "Palindrome: " << P ;
     return 0;
 }
